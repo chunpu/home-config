@@ -10,6 +10,5 @@ cd home-config &&
 
 cp etc/.??* ~ &&
 
-vim +PluginInstall +qall
-
 echo 'install success!'
+echo 'run: vim +PluginInstall +qall to update vim plugin'
