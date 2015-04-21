@@ -4,7 +4,7 @@ cd /tmp &&
 
 rm -fr home-config &&
 
-git clone git@github.com:chunpu/home-config.git &&
+git clone https://github.com/chunpu/home-config.git &&
 
 cd home-config &&
 
