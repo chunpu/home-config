@@ -1,8 +1,9 @@
 syntax on " syntax on
-set hls
-set ts=4 " tabstop = 4
+set hlsearch
+
 "set expandtab
-"set shiftwidth=2 " for cindent
+set tabstop=4
+set shiftwidth=4 " same as tabstop
 set autoindent
 
 set nocp " important for backspace and set nu 
@@ -12,8 +13,6 @@ set backspace=indent,eol,start
 
 set nu " line numer
 set noswapfile " no swap file
-"colorscheme Monokai " theme change
-"set t_Co=256 " 256 colors
 
 
 """""""""""""""""""""""""""""
@@ -49,3 +48,7 @@ filetype plugin on    " required, fuxk the indent
 
 set t_Co=256 " 256 colors, before monokai
 colorscheme monokai
+
+" fuxk auto comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+setlocal formatoptions-=c formatoptions-=r formatoptions-=o
