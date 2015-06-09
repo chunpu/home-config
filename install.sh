@@ -1,14 +1,25 @@
 #!/bin/bash
 
-cd /tmp &&
+config_install() {
+	local name=home-config
 
-rm -fr home-config &&
+	cd /tmp &&
 
-git clone https://github.com/chunpu/home-config.git &&
+	rm -fr $name &&
 
-cd home-config &&
+	# install vundle
+	git clone --depth=1 https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 
-cp etc/.??* ~ &&
+	git clone --depth=1 https://github.com/chunpu/home-config.git &&
 
-echo 'install success!'
-echo 'run: vim +PluginInstall +qall to update vim plugin'
+	cd $name &&
+
+	cp etc/.??* ~ &&
+
+	#vim +PluginInstall +qall > /tmp/$name/stdout &&
+	vim +PluginInstall +qall > /dev/tty &&
+
+	echo 'install success!'
+}
+
+config_install
