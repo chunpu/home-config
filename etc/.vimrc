@@ -33,7 +33,7 @@ Plugin 'gmarik/Vundle.vim'
 " custom plugin
 
 Plugin 'chunpu/vim-monokai'
-"Plugin 'tomasr/molokai'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
 

@@ -7,6 +7,8 @@ config_install() {
 
 	rm -fr $name &&
 
+	rm -fr ~/.vim/bundle/Vundle.vim &&
+
 	# install vundle
 	git clone --depth=1 https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 
