@@ -33,9 +33,11 @@ Plugin 'gmarik/Vundle.vim'
 " custom plugin
 
 Plugin 'chunpu/vim-monokai'
+Plugin 'chunpu/vim-actionscript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
+Plugin 'chunpu/vim-markdown'
 
 " end custom
 """"""""""""""""""""""
@@ -47,7 +49,7 @@ call vundle#end()            " required
 filetype plugin on    " required, fuxk the indent
 
 set t_Co=256 " 256 colors, before monokai
-colorscheme monokai
+colorscheme Monokai
 
 " fuxk auto comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
