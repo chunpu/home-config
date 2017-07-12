@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config_install() {
+install_config() {
 	local name=home-config
 
 	cd /tmp &&
@@ -18,10 +18,23 @@ config_install() {
 
 	cp etc/.??* ~ &&
 
-	#vim +PluginInstall +qall > /tmp/$name/stdout &&
+	# https://github.com/trapd00r/LS_COLORSvim +PluginInstall +qall > /tmp/$name/stdout &&
 	vim +PluginInstall +qall > /dev/tty &&
 
 	echo 'install success!'
 }
 
-config_install
+install_coreutils() {
+	# http://linfan.info/blog/2012/02/27/colorful-terminal-in-mac/
+	brew install xz coreutils
+	if brew list | grep coreutils > /dev/null ; then
+		PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+	fi
+}
+
+install() {
+	install_config
+	# install_coreutils only mac
+}
+
+install
